@@ -1,6 +1,10 @@
+body{
+    background-color: silver;
+    font-family: "arial black";
+}
 p{
     color: green;
-    font-style: italic;
+    font-family: "Monotype Corsiva";
 }
 
 h3, h4{
