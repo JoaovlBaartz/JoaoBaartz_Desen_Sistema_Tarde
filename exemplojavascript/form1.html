@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="formulario.js"></script>
+    <title>Formulario paciente</title>
+</head>
+<body>
+    <form action="formulario" id="formulario" onsubmit="return valida()" method="post">
+        <!--Dados Pessoais-->
+        <fieldset>
+            <div id="topo">
+                <h3>Inserir dados do paciente</h3>
+            </div>
+            <div id="linha">
+                <hr>
+            </div>
+            <br>
+            <div id="autor">
+                <h1>João vitor Luçolli Baartz</h1>
+            </div>
+            <!--Nome-->
+            <table border="0" cellspacing="5">
+                <tr>
+                    <td align="rigth">
+                        <label for="nome">Nome:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho" type="text" name="nome" size="15" required>
+                    </td>
+                </tr>
+
+            <!--Posto de saude-->
+                <tr>
+                    <td align="rigth">
+                        <label for="postosaude">Posto de saude:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho2" type="text" name="posto" size="15" maxlength="15" required>
+                    </td>
+
+            <!--Diabetes-->
+                <tr>
+                    <td align="rigth">
+                        <label for="tipodiabete">Tipo de Diabetes:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho2" type="text" name="diabetes" required>
+                    </td>
+                </tr>
+                <!--Cartão SUS-->
+                <tr>
+                    <td align="rigth">
+                        <label for="cartaosus">Cartão SUS:</label>
+                    </td>
+                    <td>
+                        <input type="text" required onkeypress="mascara(this,CartaoSus)" maxlength="14">
+                    </td>
+                </tr>
+                
+                <!--ANO INICIO DIABETES-->
+                <tr>
+                    <td align="rigth">
+                        <label for="anodiabete">Ano de inicio do Diabetes:</label>
+                    </td>
+                    <td>
+                        <input type="text" required onkeypress="mascara(this,data)" maxlength="10">
+                    </td>
+                </tr>
+
+                <!--DATA DE NASCIMENTO-->
+                <tr>
+                    <td align="rigth">
+                        <label for="dtnascimento">Data de nascimento:</label>
+                    </td>
+                    <td>
+                        <label for="">
+                            <input type="text" required onkeypress="mascara(this,data)" maxlength="10"> (dd/mm/aaaa)
+                        </label>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+
+                <!--SEXO-->
+                <tr>
+                    <td align="rigth">
+                        <label for="sexo">Sexo:</label>
+                    </td>
+                    <td>
+                        <input type="radio" value="" name="sexo" required > Masculino
+                        <input type="radio" value="" name="sexo" required > Feminino
+                    </td>
+                </tr>
+
+                <!--RG e SSP-->
+                <tr>
+                    <td align="rigth">
+                        <label for="rg">RG:</label>
+                    </td>
+                    <td>
+                        <input type="text" required onkeypress="mascara(this,RGeCPF)" maxlength="14">
+                    </td>
+                    <td align="rigth">SSP:
+                        <select id="estado" name="estado" class="estados">
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="PR">PR</option>
+                        </select>
+                     </td>
+
+                     <tr>
+                    </tr>
+                    <!--TELEFONE-->
+                    <tr>
+                      <td align="right">
+                        <label for="telefone">Telefone:
+                      </td>
+                    <td>
+                           <input type="text" onkeypress="mascara(this,telefone)" maxlength="15"> 
+                        </label>
+                     </td>
+                      <td>
+                      </td>
+                     </tr>
+
+                <!--PROFISSÃO-->
+               <tr>
+                   <td align="right">
+                       <label for="profissao">Profissão:</label>
+                    </td>
+
+                   <td>
+                      <input class="tamanho" type="text" name="profissao">
+                    </td>
+                </tr>
+
+                <!--Endereço-->
+                <tr>
+                    <td align="rigth">
+                        <label for="endereco">Endereço:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho" type="text" name="endereco" id="" required > 
+                    </td>
+                </tr>
+
+                <!--Bairro-->
+                <tr>
+                    <td align="rigth">
+                        <label for="bairro">Bairro:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho" type="text" name="bairro" id="" required > 
+                    </td>
+                </tr>
+
+                <!--Cidade-->
+                <tr>
+                    <td align="rigth">
+                        <label for="cidade">Cidade:</label>
+                    </td>
+                    <td>
+                        <input class="tamanho2" type="text" name="cidade" id="" required >
+                    </td>
+                </tr>
+                
+                <!--CEP-->
+                <tr>
+                <td align="rigth">
+                    <label for="cep">CEP:</label>
+                </td>
+                <td>
+                    <input type="text" required onkeypress="mascara(this,cep)" maxlength="10">
+                    <td align="rigth">UF
+                        <select id="estado" name="estado" class="estados">
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="PR">PR</option>
+                        </select>
+                    </td>            
+                 </td>
+                </tr>
+                <!--Pais-->
+                <tr>
+                    <td align="rigth">
+                        <label for="pais">País:</label>
+                    </td>
+                    <td>
+                       <input class="tamanho2" type="text" name="pais" id=""  value="Brasil" required>
+                    </td>
+                </tr>
+        
+                <!--botões-->
+                <tr>
+                    <td class="botao">
+                       <input class="btn1" type="submit" onclick="return validar">
+                    </td>
+                    <td class="botao">
+                        <input class="btn2" type="button" value="cancelar">
+                     </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
