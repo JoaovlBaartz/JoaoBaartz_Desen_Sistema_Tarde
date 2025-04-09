@@ -1,0 +1,77 @@
+
+
+body, h1, h2, form, fieldset, table, td, input, select, legend {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient( 45deg, #8fbef1, #156cc9, #8fbef1);
+    color: #807d7d;
+    padding: 20px;
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtítulo */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo geral do formulário */
+  form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #CFCFCF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Fieldsets com bordas e espaços */
+  fieldset {
+    border: 2px solid #1a73e8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Legenda dos fieldsets */
+  legend {
+    font-weight: bold;
+    color: #1a73e8;
+    font-size: 1.2em;
+  }
+  
+  /* Tabelas dentro dos fieldsets */
+  table {
+    width: 100%;
+  }
+  
+  /* Células da tabela */
+  td {
+    padding: 10px;
+  }
+  
+  /* Inputs, selects */
+  input[type="text"],
+  input[type="date"],
+  input[type="password"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  
