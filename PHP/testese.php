@@ -27,6 +27,11 @@
     else
      print "menor de idade .<br>";
     ?>
+        <?php
+            echo " <h2 align='center'>
+                   João Vitor Luçolli Baartz
+                </h2>";
 
+        ?>
 </body>
 </html>
