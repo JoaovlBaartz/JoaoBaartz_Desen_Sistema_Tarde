@@ -16,5 +16,14 @@
         <?php
             echo "<h2 align='center'>João Vitor Luçolli Baartz</h2>";
         ?>
+        <?php
+          echo "texto";
+          echo "ola Mundo";
+          echo "Isso abramge
+          Varias linhas. As novas linhas serao
+          saida tambem";
+          echo "Isso abrange\ nmultiplas linhas . A nova linha será \na saida tambem";
+          echo "caracteres escaping são feitos \"como esse\".";
+        ?>
     </body>
 </html>
