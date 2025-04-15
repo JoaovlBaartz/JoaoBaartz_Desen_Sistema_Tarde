@@ -25,5 +25,15 @@
           echo "Isso abrange\ nmultiplas linhas . A nova linha será \na saida tambem";
           echo "caracteres escaping são feitos \"como esse\".";
         ?>
+        <?php
+            print "<br>";
+        ?>
+        <?php
+           $comida_favorita = "italiana";
+           print $comida_favorita[2];
+           $comida_favorita = "Cozinha ".$comida_favorita;
+           echo "<br>";
+           print $comida_favorita;
+        ?>
     </body>
 </html>
