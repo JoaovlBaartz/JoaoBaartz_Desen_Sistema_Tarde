@@ -11,9 +11,8 @@
            $hora_agora = date("H:i:s", time());
         ?>
         
-        <p align="center">Hoje é dia <?php echo $data_hoje; ?></p>
-        <p align="center">Agora são <?php echo $hora_agora; ?></p>
-        
+        <p align="center">Hoje é dia <?php echo $data_hoje; ?> e são <?php echo $hora_agora; ?> Horas</p>
+
         <?php
             echo "<h2 align='center'>João Vitor Luçolli Baartz</h2>";
         ?>
