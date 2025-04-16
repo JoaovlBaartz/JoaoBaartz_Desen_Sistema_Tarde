@@ -1,5 +1,5 @@
 <?php
-  $cores = array ("amarelo", "vermelho","verde","azul");
+  $cores = array ("Amarelo","Vermelho","Verde","Azul");
   foreach($cores as $cor)
   {
      echo $cor."</br>";
