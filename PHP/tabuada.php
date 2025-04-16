@@ -17,11 +17,11 @@
 <body>
     <table>
         <?php
-            for ($i = 1; $i <= 10; $i++) {
+            for ($l = 1; $l <= 10; $l++) {
                 echo "<tr>";
                 for ($c = 1; $c <= 10; $c++) {
-                    $resultado = $i * $c;
-                    echo "<td>$i x $c = $resultado</td>";
+                    $resultado = $l * $c;
+                    echo "<td>$c x $l = $resultado</td>";
                 }
                 echo "</tr>";
             }
