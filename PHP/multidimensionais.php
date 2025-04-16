@@ -27,3 +27,9 @@ for ($linha = 0; $linha < 3; $linha++) { ?>
 <?php 
 }
 ?>
+     <?php
+        echo " <h2 align='center'>
+               João Vitor Luçolli Baartz
+               </h2>";
+
+    ?>
