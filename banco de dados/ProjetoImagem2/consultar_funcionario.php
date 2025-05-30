@@ -39,22 +39,25 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta Funcionario</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Consulra de Funcionario</h1>
-
-    <ul>
+    <?php include 'menu.php'; ?>
+    <h1>Consulta de Funcionario</h1>
+    <div class="consulta-container">
+     <ul class="consulta-lista">
         <?php foreach ($funcionarios as $funcionario):?>
             <li>
-                <a href="visualizar_funcionario.php?id=<? $funcionario ['id']?>">
+                <a href="visualizar_funcionario.php?id=<?= $funcionario['id'] ?>">
                     <?=htmlspecialchars($funcionario['nome'])?>
                 </a>
                 <form method="POST" style="display: inline;">
-                    <input type="hidden" name="excluir_id" value="<?$funcionario['id']?>">
+                    <input type="hidden" name="excluir_id" value="<?= $funcionario['id'] ?>">
                     <button type="submit">Excluir</button>
                 </form>
             </li>
         <?php endforeach; ?>
-    </ul>
+     </ul>
+    </div>
 </body>
 </html>

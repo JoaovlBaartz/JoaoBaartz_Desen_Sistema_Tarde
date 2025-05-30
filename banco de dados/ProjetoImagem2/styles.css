@@ -1,68 +1,252 @@
-/* Define estilos gerais para a página */
 body {
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Ocupa toda a altura da tela */
+    background: #f5f5f5;
     margin: 0;
-    background-color: #f4f4f4; /* Cor de fundo suave */
+    padding: 0;
 }
-
-/* Estiliza o formulário */
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.navbar {
+    background: #007bff;
+    padding: 15px;
+    color: #fff;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+}
+.menu-button {
+    background: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.menu-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+.menu-content a:hover {
+    background: #f1f1f1;
+}
+.menu:hover .menu-content {
+    display: block;
+}
+.menu-button:focus + .menu-content {
+    display: block;
+}
+.align-center {
+    text-align: center;
+}
+/* Centralizar o formulário na página */
+.container {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaço entre os elementos */
-    width: 300px;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estiliza os rótulos */
-label {
+/* Formulário estilizado */
+.container form {
+    background: #fff;
+    padding: 32px 32px 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container h1,
+.container h2 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.container label {
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
-/* Estiliza os campos de entrada */
-input {
-    padding: 10px;
-    font-size: 16px;
+.container input[type="text"],
+.container input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* Estiliza o botão */
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    font-size: 18px;
+.container button {
+    padding: 10px 0;
+    background: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.container button:hover {
+    background: #0056b3;
+}
+/* Consulta de Funcionário - Centralizar e estilizar lista */
+h1 {
+    text-align: center;
+    margin-top: 32px;
 }
 
-h1{
-    font-family: Arial, sans-serif;
-    font-size: 35px; /* Aumenta o tamanho da fonte */
+.consulta-container {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 
-h2{
-    font-family: Arial, sans-serif;
-    font-size: 20px; /* Aumenta o tamanho da fonte */
+.consulta-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 430px;
+}
+
+.consulta-lista li {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+}
+
+.consulta-lista li:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.consulta-lista a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.06rem;
+    font-weight: 500;
+    flex: 1;
+}
+
+.consulta-lista a:hover {
+    text-decoration: underline;
+}
+
+.consulta-lista form {
+    margin-left: 18px;
+}
+
+.consulta-lista button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.98rem;
+    transition: background 0.18s;
+}
+
+.consulta-lista button:hover {
+    background: #a71d2a;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background: #007bff;
+    padding: 15px;
+    color: #fff;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+}
+.menu-button {
+    background: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.menu-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+.menu-content a:hover {
+    background: #f1f1f1;
+}
+.menu:hover .menu-content {
+    display: block;
+}
+.menu-button:focus + .menu-content {
+    display: block;
+}
+
+/* Centralizar título */
+h1 {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 2.2rem;
+}
+
+/* Estilização do link abaixo do título */
+.center-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.listar-link {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.09rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: background 0.16s, color 0.16s;
+}
+
+.listar-link:hover {
+    background: #0056b3;
+    color: #e2e2e2;
 }

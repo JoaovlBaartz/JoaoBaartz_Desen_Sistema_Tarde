@@ -77,11 +77,28 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Imagens</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <?php include 'menu.php'; ?>
     <h1>Lista de imagens</h1>
     
-    <!--LInk para listar funcionarios -->
-    <a href="consultar_funcionario.php">Listar Funcionarios</a>
+    <div class="center-link-container" style="display: flex; justify-content: center; margin-top: 18px;">
+    <a class="listar-link" href="consultar_funcionario.php" style="
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 1.09rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        transition: background 0.16s, color 0.16s;
+    "
+    onmouseover="this.style.background='#0056b3';this.style.color='#e2e2e2';"
+    onmouseout="this.style.background='#007bff';this.style.color='#fff';"
+    >Listar Funcionarios</a>
+</div>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <?php include 'menu.php'; ?>
     <div class="container">
         <h1>Cadastro</h1>
         <h2>Funcionario</h2>
